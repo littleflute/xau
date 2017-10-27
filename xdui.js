@@ -31,19 +31,21 @@ var blTools = blBtn(document.body,"BLTOOLS","BlTools+");
 blTools.onclick = function(){
 	var divBlView = blDiv(document.body,"BLVIEW","BlView_V0.0.4");
 	var btnClose = blBtn(divBlView,"CloseBtn","close"); 
-    btnClose.onclick = function(){
-    	divBlView.style.display="none";
-    }
-    if(divBlView.style.display=="none"){
-    	divBlView.style.display="block"; 
-    } 
-    
+    	btnClose.style.position = "fixed";
+    	btnClose.style.top	= "180px";
+    	btnClose.onclick = function(){
+    		divBlView.style.display="none";
+    	}
+    	if(divBlView.style.display=="none"){
+    		divBlView.style.display="block"; 
+    	}     
 }
 blTools.onclick();
 var btnRun = document.getElementById("run");
 btnRun.onclick = function(){
 	blTools.onclick();
 }
+//v0.0.4
 //v0.0.3
 //v0.0.2
 //v0.0.1
