@@ -40,7 +40,11 @@ blTools.onclick = function(){
     
 }
 blTools.onclick();
-
+var btnRun = document.getElementById("run");
+btnRun.onclick = function(){
+	blTools.onclick();
+}
+//v0.0.3
 //v0.0.2
 //v0.0.1
 //file: xdui.js
