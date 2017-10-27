@@ -4,9 +4,9 @@ function blBtn(oBoss,id,html){
         r = document.createElement("button");
         r.id = id;
     	r.innerHTML = html; 
-        r.style.backgroundColor="green";
     	if(oBoss!=null)oBoss.appendChild(r);
     }
+        r.style.backgroundColor="green";
     return r;
 }
 function blDiv(oBoss,id,html){
@@ -27,7 +27,7 @@ function blDiv(oBoss,id,html){
     }
     return r;
 }
-var blTools = blBtn(document.body,"BLTOOLS","BlTools+"); 
+var blTools = blBtn(document.body,"btnRun","BlTools+"); 
 blTools._myJob = function(oBoss)
 {
 	function _Img(oBoss,id,src){
@@ -61,8 +61,7 @@ blTools._myJob = function(oBoss)
     	if(!r){
         	r = document.createElement("button");
         	r.id = id;
-            r.style.position = "relative"; 
-        	r.style.width = "auto";
+            r.style.position = "relative";  
         	r.style.border = "1px solid #3d3d3d";  
        		r.style.backgroundColor="rgb(220,200,120)";
            	r.innerHTML = html; 
@@ -73,7 +72,9 @@ blTools._myJob = function(oBoss)
 	var j1 = _Div(oBoss,"j1","j1");
 	var j2 = _Div(oBoss,"j2","j2");
 	var j1b1 = _Btn(j2,"j1b1","j1b1"); 
-    j1b1.onclick=function(){btnRun.style.display="none";};
+    j1b1.onclick=function(){
+    	btnRun.style.display="none";
+		blTools.style.display="block";};
 	var j3 = _Div(oBoss,"j3","j3");
     var j3i1 = _Img(j3,"j3i1",  "https://user-images.githubusercontent.com/17950965/32089280-9b1df7f8-bb1b-11e7-973f-90ed3a1d9c67.jpg");
     
@@ -82,10 +83,12 @@ var btnRun = document.getElementById("run");
 
 blTools.onclick = function(){ 
 	btnRun.style.display="block";
+	blTools.style.display="none";
     blTools._myJob(btnRun); 
     
 }
 blTools.onclick();
+//v0.0.9	
 //v0.0.8
 //v0.0.7	*blTools.onclick
 //v0.0.6 	+j3i1,_Img
