@@ -28,6 +28,41 @@ function blDiv(oBoss,id,html){
     return r;
 }
 var blTools = blBtn(document.body,"BLTOOLS","BlTools+"); 
+blTools._myJob = function(oBoss)
+{
+	function _Div(oBoss,id,html){
+    	var r = document.getElementById(id);
+    	if(!r){
+        	r = document.createElement("div");
+        	r.id = id;
+            r.style.position = "relative";
+    		r.style.top	= "180px";
+        	r.style.width = "140px";
+        	r.style.border = "1px solid #3d3d3d";  
+       		r.style.backgroundColor="rgb(220,100,120)";
+           	r.innerHTML = html; 
+    		if(oBoss!=null) oBoss.appendChild(r);
+    	}
+    	return r;
+	}
+	function _Btn(oBoss,id,html){
+    	var r = document.getElementById(id);
+    	if(!r){
+        	r = document.createElement("button");
+        	r.id = id;
+            r.style.position = "relative"; 
+        	r.style.width = "auto";
+        	r.style.border = "1px solid #3d3d3d";  
+       		r.style.backgroundColor="rgb(220,200,120)";
+           	r.innerHTML = html; 
+    		if(oBoss!=null) oBoss.appendChild(r);
+    	}
+    	return r;
+	} 
+	var j1 = _Div(oBoss,"j1","j1");
+	var j2 = _Div(oBoss,"j2","j2");
+	var j1b1 = _Btn(j2,"j1b1","j1b1");  
+}
 blTools.onclick = function(){
 	var divBlView = blDiv(document.body,"BLVIEW","BlView_V0.0.4");
 	var btnClose = blBtn(divBlView,"CloseBtn","close"); 
@@ -39,12 +74,14 @@ blTools.onclick = function(){
     	if(divBlView.style.display=="none"){
     		divBlView.style.display="block"; 
     	}     
+      	blTools._myJob(divBlView);
 }
 blTools.onclick();
 var btnRun = document.getElementById("run");
 btnRun.onclick = function(){
 	blTools.onclick();
 }
+//v0.0.5
 //v0.0.4
 //v0.0.3
 //v0.0.2
