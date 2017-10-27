@@ -73,29 +73,19 @@ blTools._myJob = function(oBoss)
 	} 
 	var j1 = _Div(oBoss,"j1","j1");
 	var j2 = _Div(oBoss,"j2","j2");
-	var j1b1 = _Btn(j2,"j1b1","j1b1");  
+	var j1b1 = _Btn(j2,"j1b1","j1b1"); 
+    	j1b1.onclick=function(){btnRun.style.display="none";}; 
 	var j3 = _Div(oBoss,"j3","j3");
     	var j3i1 = _Img(j3,"j3i1",  "https://user-images.githubusercontent.com/17950965/32089280-9b1df7f8-bb1b-11e7-973f-90ed3a1d9c67.jpg");
 }
-blTools.onclick = function(){
-	var divBlView = blDiv(document.body,"BLVIEW","BlView_V0.0.4");
-	var btnClose = blBtn(divBlView,"CloseBtn","close"); 
-    	btnClose.style.position = "fixed";
-    	btnClose.style.top	= "180px";
-    	btnClose.onclick = function(){
-    		divBlView.style.display="none";
-    	}
-    	if(divBlView.style.display=="none"){
-    		divBlView.style.display="block"; 
-    	}     
+blTools.onclick = function(){ 
+	btnRun.style.display="block";
       	blTools._myJob(divBlView);
 }
+var btnRun = document.getElementById("run"); 
 blTools.onclick();
-var btnRun = document.getElementById("run");
-btnRun.onclick = function(){
-	blTools.onclick();
-}
 
+//v0.0.7	*blTools.onclick
 //v0.0.6 	+j3i1,_Img
 //v0.0.5
 //v0.0.4
