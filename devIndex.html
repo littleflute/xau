@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -23,21 +24,37 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<style>
+	#xdDiv{
+		padding:25px 20px 40px 20px;margin:0;position:fixed;top:0;left:0;right:0;
+		width:100%;text-align:center;
+		background:url(../images/background.png) #4276b6;box-shadow:1px 0px 2px rgba(0,0,0,0.75);
+		z-index:99;-webkit-font-smoothing:antialiased;min-height:76px;
+		color:#d8d8d8;
+	}
+	#xdSection{ 
+		width:590px;padding:30px 30px 50px 30px;margin:20px 0;margin-top:190px;
+		position:fixed;background:#fbfbfb;border-radius:3px;
+		border:1px solid #cbcbcb;
+		box-shadow:0px 1px 2px rgba(0,0,0,0.09),inset 0px 0px 2px 2px rgba(255,255,255,0.5),inset 0 0 5px 5px rgba(255,255,255,0.4)
+		 
+	}
 
+	</style>
   </head>
   <body>
-
-      <header>
-        <div id="xdDiv" style="border:1px red solid;">
-        <h1>xau</h1>
+ 
+        <div id="xdDiv">
+        <h1 style="color:#d8d8d8;">xau</h1>
         <p></p>
         </div>
-      </header>
 
       <div id="banner">
         <span id="logo"></span>
 
         <a href="https://github.com/littleflute/xau" class="button fork"><strong>View On GitHub</strong></a>
+        <a href="?v=" class="button"><strong>refresh</strong></a>
+        <a href="https://littleflute.github.io/xau/" class="button"><strong>Home</strong></a>
         
       </div><!-- end banner -->
 
@@ -48,20 +65,20 @@
           <li><a href="#">a2</a></li>
         </ul>
       </nav>
-      <section>
-        <h3 id="xau-v009---me---prj">xau <a href="https://github.com/littleflute/xau/edit/master/devIndex.html">v0.0.22</a> 
+      <div id="xdSection">
+        <h3 id="xau-v009---me---prj">xau <a href="https://github.com/littleflute/xau/edit/master/devIndex.html">v0.0.55</a> 
           - <a href="https://littleflute.github.io/xau/">Home</a> 
           - <a href="https://github.com/littleflute/xau">prj</a></h3>
-<h3 id="_xduijs---see_xduijs"><a href="https://github.com/littleflute/xau/edit/master/xdui.js">*_xdui.js</a> - <a href="https://littleflute.github.io/xau/xdui.js">see_xdui.js</a></h3>
+		<h3 id="_xduijs---see_xduijs"><a href="https://github.com/littleflute/xau/edit/master/xdui.js">*_xdui.js</a> - <a href="https://littleflute.github.io/xau/xdui.js">see_xdui.js</a></h3>
 <h3 id="blog"><a href="https://littleflute.github.io/blog">blog</a></h3>
  
 <p><button id="btnRun">+</button></p>
 <div id="run">run</div>
-<script src="https://littleflute.github.io/xau/xdui.js"></script>
+	<script src="https://littleflute.github.io/xau/xdui.js"></script>
 
 
 
-      </section>
+      </div>
       <footer>
         
           <p>Project maintained by <a href="https://github.com/littleflute">littleflute</a></p>
